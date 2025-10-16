@@ -1,8 +1,8 @@
-import { type Message, MessageSchema, StateSchema } from "@aikyo/server";
-import { z } from "zod";
-import WebSocket from "ws";
 import * as fs from "node:fs";
 import * as path from "node:path";
+import { type Message, MessageSchema, StateSchema } from "@aikyo/server";
+import WebSocket from "ws";
+import { z } from "zod";
 
 const receivedData: Message[] = [];
 
@@ -12,10 +12,7 @@ const companionToYmmCharacter: Record<string, string> = {
   companion_aya: "ゆっくり魔理沙",
 };
 
-const requestSchema = z.union([
-  StateSchema,
-  MessageSchema,
-]);
+const requestSchema = z.union([StateSchema, MessageSchema]);
 
 // WebSocketサーバーに接続
 const ws = new WebSocket("ws://localhost:8080");
@@ -70,7 +67,8 @@ ws.on("close", () => {
     // 各メッセージをCSV行に変換
     const csvLines: string[] = receivedData.map((msg) => {
       // 対応辞書を使ってキャラクター名を変換（辞書にない場合は元の名前を使用）
-      const speaker = companionToYmmCharacter[msg.params.from] ?? msg.params.from;
+      const speaker =
+        companionToYmmCharacter[msg.params.from] ?? msg.params.from;
       // セリフ内のダブルクォートをエスケープし、カンマや改行が含まれる場合はダブルクォートで囲む
       const message = msg.params.message.replace(/"/g, '""');
       const needsQuotes = /[,"\n]/.test(msg.params.message);

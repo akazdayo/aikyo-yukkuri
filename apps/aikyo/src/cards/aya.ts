@@ -68,5 +68,5 @@ export const ayaCompanionCard = new CompanionAgent(
   ayaHistory,
   {
     enableRepetitionJudge: false,
-  }
+  },
 );

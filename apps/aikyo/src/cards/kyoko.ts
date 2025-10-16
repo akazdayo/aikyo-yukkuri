@@ -68,5 +68,5 @@ export const kyokoCompanionCard = new CompanionAgent(
   kyokoHistory,
   {
     enableRepetitionJudge: false,
-  }
+  },
 );
