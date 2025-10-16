@@ -7,7 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "zod": "catalog:"
+    "zod": "catalog:",
+    "@aikyo/firehose": "catalog:",
+    "@aikyo/server": "catalog:",
+    "@aikyo/utils": "catalog:",
+    "ws": "catalog:"
+  },
+  "devDependencies": {
+    "@types/ws": "catalog:"
   },
   "keywords": [],
   "author": "",

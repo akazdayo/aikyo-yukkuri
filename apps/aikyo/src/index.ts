@@ -11,5 +11,5 @@ import { createFirehoseServer } from "./utils/firehose";
     ],
     5000,
   );
-  createFirehoseServer(8000);
+  createFirehoseServer(8080);
 })();

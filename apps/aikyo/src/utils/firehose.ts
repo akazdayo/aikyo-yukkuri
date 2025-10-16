@@ -34,5 +34,10 @@ export async function createFirehoseServer(port: number = 8080) {
   await firehose.subscribe("messages", (data) => {
     firehose.broadcastToClients(data);
   });
+
+  await firehose.subscribe("states", (data) => {
+    firehose.broadcastToClients(data);
+  });
+
   return firehose;
 }
