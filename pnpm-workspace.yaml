@@ -1,0 +1,8 @@
+packages:
+  - "apps/*"
+
+catalog:
+  zod: ^3.25.0
+  "@types/ws": ^8.18.1
+  ws: ^8.18.3
+  tsx: ^4.20.5
