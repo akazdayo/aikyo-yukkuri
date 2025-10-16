@@ -88,6 +88,9 @@ importers:
       '@types/ws':
         specifier: 'catalog:'
         version: 8.18.1
+      tsx:
+        specifier: 'catalog:'
+        version: 4.20.6
 
 packages:
 

@@ -3,7 +3,7 @@ import { QueryResultSchema } from "@aikyo/server";
 import WebSocket from "ws";
 import { RequestSchema, speakDataSchema } from "./types/firehose";
 
-const ws = new WebSocket("ws://localhost:8000");
+const ws = new WebSocket("ws://localhost:8080");
 
 export async function createFirehoseServer(port: number = 8080) {
   // Create a new Firehose server

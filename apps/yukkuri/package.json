@@ -1,10 +1,12 @@
 {
   "name": "yukkuri",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsx ./src/index.ts"
   },
   "dependencies": {
     "zod": "catalog:",
@@ -14,7 +16,8 @@
     "ws": "catalog:"
   },
   "devDependencies": {
-    "@types/ws": "catalog:"
+    "@types/ws": "catalog:",
+    "tsx": "catalog:"
   },
   "keywords": [],
   "author": "",

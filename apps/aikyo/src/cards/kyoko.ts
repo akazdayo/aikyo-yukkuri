@@ -64,6 +64,9 @@ export const kyokoHistory: Message[] = [];
 
 export const kyokoCompanionCard = new CompanionAgent(
   companionCard,
-  anthropic("claude-3-5-haiku-latest"),
+  anthropic("claude-haiku-4-5"),
   kyokoHistory,
+  {
+    enableRepetitionJudge: false,
+  }
 );

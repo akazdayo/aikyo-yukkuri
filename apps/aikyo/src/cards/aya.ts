@@ -64,6 +64,9 @@ export const ayaHistory: Message[] = [];
 
 export const ayaCompanionCard = new CompanionAgent(
   companionCard,
-  anthropic("claude-3-5-haiku-latest"),
+  anthropic("claude-haiku-4-5"),
   ayaHistory,
+  {
+    enableRepetitionJudge: false,
+  }
 );
