@@ -22,6 +22,9 @@ catalogs:
       specifier: 3.25.76
       version: 3.25.76
 
+overrides:
+  ai: 5.0.76
+
 importers:
 
   .:
@@ -37,16 +40,16 @@ importers:
         version: 2.0.30(zod@3.25.76)
       '@aikyo/firehose':
         specifier: 'catalog:'
-        version: 1.5.6(@types/json-schema@7.0.15)(ai@5.0.72(zod@3.25.76))(openapi-types@12.1.3)(react-native@0.82.0(@babel/core@7.28.4)(react@19.2.0))(typescript@5.9.3)
+        version: 1.5.6(@types/json-schema@7.0.15)(ai@5.0.76(zod@3.25.76))(openapi-types@12.1.3)(react-native@0.82.0(@babel/core@7.28.4)(react@19.2.0))(typescript@5.9.3)
       '@aikyo/server':
         specifier: 'catalog:'
-        version: 1.4.6(@types/json-schema@7.0.15)(ai@5.0.72(zod@3.25.76))(openapi-types@12.1.3)(react-native@0.82.0(@babel/core@7.28.4)(react@19.2.0))
+        version: 1.4.6(@types/json-schema@7.0.15)(ai@5.0.76(zod@3.25.76))(openapi-types@12.1.3)(react-native@0.82.0(@babel/core@7.28.4)(react@19.2.0))
       '@aikyo/utils':
         specifier: 'catalog:'
         version: 1.4.7(@types/json-schema@7.0.15)(openapi-types@12.1.3)(react-native@0.82.0(@babel/core@7.28.4)(react@19.2.0))(typescript@5.9.3)
       ai:
-        specifier: ^5.0.47
-        version: 5.0.72(zod@3.25.76)
+        specifier: 5.0.76
+        version: 5.0.76(zod@3.25.76)
       zod:
         specifier: 'catalog:'
         version: 3.25.76
@@ -97,12 +100,6 @@ packages:
 
   '@ai-sdk/anthropic@2.0.30':
     resolution: {integrity: sha512-JgUyNM4qJf/JicXB4bwzW1x69DUVf1rGhGRCTI0aWTc+QZx0EeCgzcfUzPTfHmqOJOnYc6R7iyVQw71wU9iGPA==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      zod: ^3.25.76 || ^4.1.8
-
-  '@ai-sdk/gateway@1.0.40':
-    resolution: {integrity: sha512-zlixM9jac0w0jjYl5gwNq+w9nydvraAmLaZQbbh+QpHU+OPkTIZmyBcKeTq5eGQKQxhi+oquHxzCSKyJx3egGw==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4.1.8
@@ -964,7 +961,7 @@ packages:
     resolution: {integrity: sha512-DFqw/gbewLG6JZ/dsj/nXH8zM/4SAchAu18MLbj1mHxlW5kc31ogR8x+8XK+9/55EBRDGMl0TX31W8DFhzVCQQ==}
     peerDependencies:
       '@mastra/core': 0.0.0-ai-v5-20250813235735
-      ai: ^5.0.0
+      ai: 5.0.76
 
   '@mastra/libsql@0.0.0-ai-v5-20250813235735':
     resolution: {integrity: sha512-yz3MKWFQNVwyDg64MlqI7fiXu2f4Yaip9EiD30crfrIIduzp3opRuOkL/wYaDJZawpZZcs2jn6KCzGUN+cdU0Q==}
@@ -990,7 +987,7 @@ packages:
   '@mastra/schema-compat@0.0.0-ai-v5-20250813235735':
     resolution: {integrity: sha512-nNxFAroA9d+7M2WffCR/TLM08cld5apZ9IZuAiGZRlBbBr2yKiVOhx5/yoBtHA+FBww8GmWnbSmX23E+rlewGQ==}
     peerDependencies:
-      ai: ^5.0.0
+      ai: 5.0.76
       zod: ^3.0.0
 
   '@modelcontextprotocol/sdk@1.20.0':
@@ -2004,10 +2001,6 @@ packages:
   '@upstash/redis@1.35.6':
     resolution: {integrity: sha512-aSEIGJgJ7XUfTYvhQcQbq835re7e/BXjs8Janq6Pvr6LlmTZnyqwT97RziZLO/8AVUL037RLXqqiQC6kCt+5pA==}
 
-  '@vercel/oidc@3.0.2':
-    resolution: {integrity: sha512-JekxQ0RApo4gS4un/iMGsIL1/k4KUBe3HmnGcDvzHuFBdQdudEJgTqcsJC7y6Ul4Yw5CeykgvQbX2XeEJd0+DA==}
-    engines: {node: '>= 20'}
-
   '@vercel/oidc@3.0.3':
     resolution: {integrity: sha512-yNEQvPcVrK9sIe637+I0jD6leluPxzwJKx/Haw6F4H77CdDsszUn5V3o96LPziXkSNE2B83+Z3mjqGKBK/R6Gg==}
     engines: {node: '>= 20'}
@@ -2044,12 +2037,6 @@ packages:
   agent-base@7.1.4:
     resolution: {integrity: sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==}
     engines: {node: '>= 14'}
-
-  ai@5.0.72:
-    resolution: {integrity: sha512-LB4APrlESLGHG/5x+VVdl0yYPpHPHpnGd5Gwl7AWVL+n7T0GYsNos/S/6dZ5CZzxLnPPEBkRgvJC4rupeZqyNg==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      zod: ^3.25.76 || ^4.1.8
 
   ai@5.0.76:
     resolution: {integrity: sha512-ZCxi1vrpyCUnDbtYrO/W8GLvyacV9689f00yshTIQ3mFFphbD7eIv40a2AOZBv3GGRA7SSRYIDnr56wcS/gyQg==}
@@ -4376,13 +4363,6 @@ snapshots:
       '@ai-sdk/provider-utils': 3.0.12(zod@3.25.76)
       zod: 3.25.76
 
-  '@ai-sdk/gateway@1.0.40(zod@3.25.76)':
-    dependencies:
-      '@ai-sdk/provider': 2.0.0
-      '@ai-sdk/provider-utils': 3.0.12(zod@3.25.76)
-      '@vercel/oidc': 3.0.2
-      zod: 3.25.76
-
   '@ai-sdk/gateway@2.0.0(zod@3.25.76)':
     dependencies:
       '@ai-sdk/provider': 2.0.0
@@ -4419,45 +4399,6 @@ snapshots:
       zod: 3.25.76
       zod-to-json-schema: 3.24.6(zod@3.25.76)
 
-  '@aikyo/firehose@1.5.6(@types/json-schema@7.0.15)(ai@5.0.72(zod@3.25.76))(openapi-types@12.1.3)(react-native@0.82.0(@babel/core@7.28.4)(react@19.2.0))(typescript@5.9.3)':
-    dependencies:
-      '@aikyo/server': 1.4.6(@types/json-schema@7.0.15)(ai@5.0.72(zod@3.25.76))(openapi-types@12.1.3)(react-native@0.82.0(@babel/core@7.28.4)(react@19.2.0))
-      '@chainsafe/libp2p-gossipsub': 14.1.2
-      '@chainsafe/libp2p-noise': 16.1.5
-      '@chainsafe/libp2p-yamux': 7.0.4
-      '@libp2p/identify': 3.0.39
-      '@libp2p/mdns': 11.0.47
-      '@libp2p/tcp': 10.1.19
-      helia: 5.5.1(react-native@0.82.0(@babel/core@7.28.4)(react@19.2.0))
-      libp2p: 2.10.0
-      pino: 10.0.0
-      pino-pretty: 13.1.2
-      typescript: 5.9.3
-      ws: 8.18.3
-      zod: 3.25.76
-    transitivePeerDependencies:
-      - '@hono/arktype-validator'
-      - '@hono/effect-validator'
-      - '@hono/typebox-validator'
-      - '@hono/valibot-validator'
-      - '@hono/zod-validator'
-      - '@sinclair/typebox'
-      - '@types/json-schema'
-      - '@valibot/to-json-schema'
-      - ai
-      - arktype
-      - aws-crt
-      - bufferutil
-      - effect
-      - encoding
-      - openapi-types
-      - pg-native
-      - react-native
-      - supports-color
-      - utf-8-validate
-      - valibot
-      - zod-openapi
-
   '@aikyo/firehose@1.5.6(@types/json-schema@7.0.15)(ai@5.0.76(zod@3.25.76))(openapi-types@12.1.3)(react-native@0.82.0(@babel/core@7.28.4)(react@19.2.0))(typescript@5.9.3)':
     dependencies:
       '@aikyo/server': 1.4.6(@types/json-schema@7.0.15)(ai@5.0.76(zod@3.25.76))(openapi-types@12.1.3)(react-native@0.82.0(@babel/core@7.28.4)(react@19.2.0))
@@ -4474,52 +4415,6 @@ snapshots:
       typescript: 5.9.3
       ws: 8.18.3
       zod: 3.25.76
-    transitivePeerDependencies:
-      - '@hono/arktype-validator'
-      - '@hono/effect-validator'
-      - '@hono/typebox-validator'
-      - '@hono/valibot-validator'
-      - '@hono/zod-validator'
-      - '@sinclair/typebox'
-      - '@types/json-schema'
-      - '@valibot/to-json-schema'
-      - ai
-      - arktype
-      - aws-crt
-      - bufferutil
-      - effect
-      - encoding
-      - openapi-types
-      - pg-native
-      - react-native
-      - supports-color
-      - utf-8-validate
-      - valibot
-      - zod-openapi
-
-  '@aikyo/server@1.4.6(@types/json-schema@7.0.15)(ai@5.0.72(zod@3.25.76))(openapi-types@12.1.3)(react-native@0.82.0(@babel/core@7.28.4)(react@19.2.0))':
-    dependencies:
-      '@chainsafe/libp2p-gossipsub': 14.1.2
-      '@chainsafe/libp2p-noise': 16.1.5
-      '@chainsafe/libp2p-yamux': 7.0.4
-      '@libp2p/identify': 3.0.39
-      '@libp2p/interface': 2.11.0
-      '@libp2p/mdns': 11.0.47
-      '@libp2p/tcp': 10.1.19
-      '@mastra/core': 0.0.0-ai-v5-20250813235735(openapi-types@12.1.3)(zod@3.25.76)
-      '@mastra/evals': 0.0.0-ai-v5-20250813235735(@mastra/core@0.0.0-ai-v5-20250813235735(openapi-types@12.1.3)(zod@3.25.76))(ai@5.0.72(zod@3.25.76))
-      '@mastra/libsql': 0.0.0-ai-v5-20250813235735(@mastra/core@0.0.0-ai-v5-20250813235735(openapi-types@12.1.3)(zod@3.25.76))
-      '@mastra/loggers': 0.0.0-ai-v5-20250813235735(@mastra/core@0.0.0-ai-v5-20250813235735(openapi-types@12.1.3)(zod@3.25.76))
-      '@mastra/mcp': 0.0.0-ai-v5-20250813235735(@mastra/core@0.0.0-ai-v5-20250813235735(openapi-types@12.1.3)(zod@3.25.76))(@types/json-schema@7.0.15)(zod@3.25.76)
-      '@mastra/memory': 0.0.0-ai-v5-20250813235735(@mastra/core@0.0.0-ai-v5-20250813235735(openapi-types@12.1.3)(zod@3.25.76))
-      cel-js: 0.8.2
-      dotenv: 17.2.3
-      helia: 5.5.1(react-native@0.82.0(@babel/core@7.28.4)(react@19.2.0))
-      libp2p: 2.9.0
-      pino: 10.0.0
-      pino-pretty: 13.1.2
-      zod: 3.25.76
-      zod-from-json-schema: 0.0.5
     transitivePeerDependencies:
       - '@hono/arktype-validator'
       - '@hono/effect-validator'
@@ -6260,18 +6155,6 @@ snapshots:
       - valibot
       - zod-openapi
 
-  '@mastra/evals@0.0.0-ai-v5-20250813235735(@mastra/core@0.0.0-ai-v5-20250813235735(openapi-types@12.1.3)(zod@3.25.76))(ai@5.0.72(zod@3.25.76))':
-    dependencies:
-      '@mastra/core': 0.0.0-ai-v5-20250813235735(openapi-types@12.1.3)(zod@3.25.76)
-      ai: 5.0.72(zod@3.25.76)
-      compromise: 14.14.4
-      difflib: 0.2.4
-      fs-extra: 11.3.2
-      keyword-extractor: 0.0.28
-      sentiment: 5.0.2
-      string-similarity: 4.0.4
-      zod: 3.25.76
-
   '@mastra/evals@0.0.0-ai-v5-20250813235735(@mastra/core@0.0.0-ai-v5-20250813235735(openapi-types@12.1.3)(zod@3.25.76))(ai@5.0.76(zod@3.25.76))':
     dependencies:
       '@mastra/core': 0.0.0-ai-v5-20250813235735(openapi-types@12.1.3)(zod@3.25.76)
@@ -7792,8 +7675,6 @@ snapshots:
     dependencies:
       uncrypto: 0.1.3
 
-  '@vercel/oidc@3.0.2': {}
-
   '@vercel/oidc@3.0.3': {}
 
   abort-controller@3.0.0:
@@ -7829,14 +7710,6 @@ snapshots:
   acorn@8.15.0: {}
 
   agent-base@7.1.4: {}
-
-  ai@5.0.72(zod@3.25.76):
-    dependencies:
-      '@ai-sdk/gateway': 1.0.40(zod@3.25.76)
-      '@ai-sdk/provider': 2.0.0
-      '@ai-sdk/provider-utils': 3.0.12(zod@3.25.76)
-      '@opentelemetry/api': 1.9.0
-      zod: 3.25.76
 
   ai@5.0.76(zod@3.25.76):
     dependencies:

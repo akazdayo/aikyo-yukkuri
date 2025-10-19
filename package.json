@@ -16,5 +16,10 @@
   "packageManager": "pnpm@10.17.1",
   "devDependencies": {
     "@biomejs/biome": "2.2.4"
+  },
+  "pnpm": {
+    "overrides": {
+      "ai": "5.0.76"
+    }
   }
 }
