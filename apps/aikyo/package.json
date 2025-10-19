@@ -19,11 +19,9 @@
     "@aikyo/server": "catalog:",
     "@aikyo/utils": "catalog:",
     "ai": "^5.0.47",
-    "ws": "catalog:",
     "zod": "catalog:"
   },
   "devDependencies": {
-    "tsx": "catalog:",
-    "@types/ws": "catalog:"
+    "tsx": "catalog:"
   }
 }

@@ -13,10 +13,10 @@
     "@aikyo/firehose": "catalog:",
     "@aikyo/server": "catalog:",
     "@aikyo/utils": "catalog:",
-    "ws": "catalog:"
+    "ws": "^8.18.3"
   },
   "devDependencies": {
-    "@types/ws": "catalog:",
+    "@types/ws": "^8.18.1",
     "tsx": "catalog:"
   },
   "keywords": [],
