@@ -2,7 +2,7 @@ packages:
   - "apps/*"
 
 catalog:
-  zod: 3.25.0
+  zod: 3.25.76
   tsx: ^4.20.5
   "@aikyo/firehose": ^1.5.6
   "@aikyo/server": ^1.4.6
